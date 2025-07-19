@@ -1,10 +1,17 @@
 import React from 'react'
 
-const Child = () => {
+const Child = ({value}) => {
+
+  const handleChange = (e) => {
+    value(e);
+  };
+
   return (
-    <div>
+    <div style={{backgroundColor:"#CD5B19",height:"150px",width:"400px",position:"absolute",top:"120px"}}>
         <h1>Child Component 1</h1>
-        <button>option 1</button>
+        <button
+        onClick={() => handleChange("option1")}
+        >option 1</button>
     </div>
   )
 }
